@@ -1,0 +1,15 @@
+<% content_for :title, "Events" %>
+<div class="tag-nav">Tags: <% Event::TAGS.sort.each do |tag| %>
+  <div class="tag-link"><%= link_to tag, events_path(tag: tag) %></div>
+<% end %>
+  <div class="tag-link"><%= link_to "all", events_path %></div>
+</div>
+<br/>
+<%= week_calendar(number_of_weeks: 2, events: @events) do |date, events| %>
+  <%= date %>
+  <% events.each do |event| %>
+    <div>
+      <%= link_to event.title, event %>
+    </div>
+  <% end %>
+<% end %>
