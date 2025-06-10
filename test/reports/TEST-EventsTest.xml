@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time='2.939724' skipped='0' failures='0' errors='4' name="EventsTest" assertions='0' tests='4' timestamp="2025-06-10T17:25:00-04:00">
+  <testcase time='1.941047' file="test/system/events_test.rb" name="test_should_create_event" assertions='0'>
+    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
+    </error>
+  </testcase>
+  <testcase time='0.342230' file="test/system/events_test.rb" name="test_should_destroy_Event" assertions='0'>
+    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
+    </error>
+  </testcase>
+  <testcase time='0.326675' file="test/system/events_test.rb" name="test_visiting_the_index" assertions='0'>
+    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
+    </error>
+  </testcase>
+  <testcase time='0.329772' file="test/system/events_test.rb" name="test_should_update_Event" assertions='0'>
+    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
+    </error>
+  </testcase>
+</testsuite>
