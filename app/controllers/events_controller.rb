@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show edit approve reject update destroy ]
-  before_action :require_user!, except: %i[ index show new create ]
+  before_action :set_event, only: %i[show edit approve reject update destroy]
+  before_action :require_user!, except: %i[index show new create]
 
   # GET /events or /events.json
   def index
@@ -22,7 +22,7 @@ class EventsController < ApplicationController
         format.html { redirect_to @event, notice: "Event was successfully approved." }
         format.json { render :show, status: :ok, location: @event }
       else
-        format.html { render :show, status: :unprocessable_entity, notice: "Event was not approved."  }
+        format.html { render :show, status: :unprocessable_entity, notice: "Event was not approved." }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
@@ -36,7 +36,7 @@ class EventsController < ApplicationController
         format.html { redirect_to @event, notice: "Event was successfully rejected." }
         format.json { render :show, status: :ok, location: @event }
       else
-        format.html { render :show, status: :unprocessable_entity, notice: "Event was not rejected."  }
+        format.html { render :show, status: :unprocessable_entity, notice: "Event was not rejected." }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
@@ -57,7 +57,7 @@ class EventsController < ApplicationController
 
   # POST /events or /events.json
   def create
-    event_params[:tags].compact_blank!
+    params[:event][:tags].compact_blank!
     # Set the status to "pending" by default
     event_params[:status] = "pending"
     @event = Event.new(event_params)
@@ -100,6 +100,7 @@ class EventsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.find(params.expect(:id))
@@ -107,6 +108,6 @@ class EventsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:location, :start_time, :end_time, :title, :url, :description, :event_type, :cost, tags: [])
+    params.require(:event).permit(:location, :start_time, :end_time, :title, :url, :description, :cost, :pre_registration_required, tags: [])
   end
 end

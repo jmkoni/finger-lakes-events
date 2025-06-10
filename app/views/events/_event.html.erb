@@ -35,12 +35,10 @@
     </div>
   <% end %>
 
-  <% if event.event_type.present? %>
-    <div class="attribute">
-      <strong>Type:</strong>
-      <%= event.event_type %>
-    </div>
-  <% end %>
+  <div class="attribute">
+    <strong>Pre-registration Required?:</strong>
+    <%= event.pre_registration_required? ? "Yes" : "No" %>
+  </div>
 
   <% if event.tags.present? %>
     <div class="attribute">
