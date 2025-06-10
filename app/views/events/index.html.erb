@@ -5,11 +5,21 @@
   <div class="tag-link"><%= link_to "all", events_path %></div>
 </div>
 <br/>
-<%= week_calendar(number_of_weeks: 2, events: @events) do |date, events| %>
-  <%= date %>
+<%= month_calendar(events: @events) do |date, events| %>
+  <% if date.month != Date.today.month %>
+    <%= date.strftime("%B %-d") %>
+  <% else %>
+    <%= date.day %>
+  <% end %>
   <% events.each do |event| %>
     <div>
       <%= link_to event.title, event %>
     </div>
   <% end %>
+<% end %>
+<br>
+<hr>
+<% unless @events.empty? %>
+  <h3>Upcoming Events</h3>
+  <%= render "table", events: @events.upcoming, approve: false %>
 <% end %>

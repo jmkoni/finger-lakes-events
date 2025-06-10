@@ -1,6 +1,6 @@
 module EventsHelper
   def format_time(date_time)
-    date_time.strftime("%B %-d, %Y, %I:%M %p")
+    date_time.strftime("%B %-d, %Y, %-l:%M %p")
   end
 
   def format_cost(cost)

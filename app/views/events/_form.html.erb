@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'currency', 'data-turbo-track': 'load', defer: true %>
 <%= form_with(model: event, class: "event-form") do |form| %>
   <% if event.errors.any? %>
     <div style="color: red">
@@ -33,7 +34,7 @@
 
   <div>
     <%= form.label :cost %>
-    <%=  form.text_field :cost, data: {type: "currency"}, placeholder: "$0.00", class: "dollar" %>
+    <%= form.text_field :cost, data: {type: "currency"}, placeholder: "$0.00", class: "dollar" %>
   </div>
 
   <div>
@@ -47,8 +48,8 @@
   </div>
 
   <div>
-    <%= form.label :type %>
-    <%= form.text_field :event_type %>
+    <%= form.label "Pre-registration Required?" %>
+    <%= form.check_box :pre_registration_required %>
   </div>
 
   <div>

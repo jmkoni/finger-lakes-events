@@ -100,8 +100,12 @@ header a:visited {
     display: none;
 }
 
-
 h1 a:visited{
+    color: var(--whitesmoke) !important;
+    text-decoration: none !important;
+}
+
+h1 a:link {
     color: var(--whitesmoke) !important;
     text-decoration: none !important;
 }

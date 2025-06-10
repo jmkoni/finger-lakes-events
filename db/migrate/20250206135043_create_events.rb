@@ -17,7 +17,7 @@ class CreateEvents < ActiveRecord::Migration[8.0]
       t.string :tags, array: true, default: []
       t.float :cost, null: false, default: 0.0
       t.enum :status, enum_type: :status_types, default: "pending", null: false
-      t.references :approved_by, foreign_key: { to_table: :users }
+      t.references :approved_by, foreign_key: {to_table: :users}
 
       t.timestamps
     end
