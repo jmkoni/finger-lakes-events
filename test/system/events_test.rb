@@ -24,7 +24,7 @@ class EventsTest < ApplicationSystemTestCase
     @event.tags.each do |tag|
       select.select(tag)
     end
-    page.execute_script("document.querySelector('#event_start_time').setAttribute('value', #{@event.start_time.strftime('%Y-%m-%dT%H:%M:%S')})")
+    page.execute_script("document.querySelector('#event_start_time').setAttribute('value', #{@event.start_time.strftime("%Y-%m-%dT%H:%M:%S")})")
     fill_in "Url", with: @event.url
     click_on "Create Event"
 
