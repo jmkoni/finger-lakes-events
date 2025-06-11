@@ -30,7 +30,7 @@
           <% if content_for(:title) == "Events" %>
               <h1 class="logo">Finger Lakes Events</h1>
           <% else %>
-            <h1 class="logo" style="text-decoration: none"><%= link_to "Finger Lakes Events - " + content_for(:title), events_path %></h1>
+            <h1 class="logo" style="text-decoration: none"><%= link_to "Finger Lakes Events - " + content_for(:title).to_s, events_path %></h1>
           <% end %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>

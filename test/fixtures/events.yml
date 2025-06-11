@@ -2,20 +2,20 @@
 
 one:
   title: GreatEvent
-  start_time: 2025-02-06 08:50:43
-  url: MyString
+  start_time: <%= DateTime.tomorrow %>
+  url: https://example.com
   description: MyText
-  tags: [MyString]
+  tags: [art, charity]
   cost: 1.5
   status: pending
   approved_by_id:
 
 two:
   title: LessGreatEvent
-  start_time: 2025-02-06 08:50:43
-  url: MyString
+  start_time: <%= DateTime.tomorrow %>
+  url: https://example.com
   description: MyText
-  tags: [MyString]
+  tags: [conference, party]
   cost: 1.5
   status: pending
   approved_by_id:

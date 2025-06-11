@@ -2,20 +2,9 @@ require "test_helper"
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = User.create(name: "test user", email: "testemail@example.com")
-    sign_in @user
-    @event = Event.create(
-      title: "Test Event",
-      start_time: Time.current,
-      end_time: Time.current + 1.hour,
-      description: "This is a test event.",
-      location: "Test Location",
-      cost: 0,
-      pre_registration_required: false,
-      tags: ["art", "charity"],
-      url: "http://example.com/test-event",
-      status: "pending"
-    )
+    @user = users(:one)
+    Passwordless::Session.stubs(:find_by).returns(Passwordless::Session.create(authenticatable: @user))
+    @event = events(:one)
   end
 
   test "should get index" do

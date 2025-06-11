@@ -33,7 +33,7 @@
                     <td><%= event.description %></td>
                     <td><%= event.tags.to_sentence %></td>
                     <td>
-                        <%= link_to("👍", approve_event_path(event), data: {turbo_method: :post}) %> | <%= link_to("👎", reject_event_path(event), data: {turbo_method: :post}) %>
+                        <%= link_to("👍", approve_event_path(event), data: {turbo_method: :post}, class: "approve-event-#{event.id}") %> | <%= link_to("👎", reject_event_path(event), data: {turbo_method: :post}, class: "reject-event-#{event.id}") %>
                     </td>
                 <% end %>
             </tr>

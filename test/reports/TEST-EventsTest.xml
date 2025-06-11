@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite time='2.939724' skipped='0' failures='0' errors='4' name="EventsTest" assertions='0' tests='4' timestamp="2025-06-10T17:25:00-04:00">
-  <testcase time='1.941047' file="test/system/events_test.rb" name="test_should_create_event" assertions='0'>
-    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
+<testsuite time='2.721252' skipped='0' failures='0' errors='1' name="EventsTest" assertions='10' tests='6' timestamp="2025-06-11T11:25:04-04:00">
+  <testcase time='1.454002' file="test/system/events_test.rb" name="test_should_destroy_Event" assertions='1'>
+  </testcase>
+  <testcase time='0.173558' file="test/system/events_test.rb" name="test_should_reject_event" assertions='3'>
+  </testcase>
+  <testcase time='0.512020' file="test/system/events_test.rb" name="test_should_create_event" assertions='0'>
+    <error type='Selenium::WebDriver::Error::JavascriptError' message="javascript error: Invalid or unexpected token&#13;&#10;  (Session info: chrome=137.0.7151.70)">test/system/events_test.rb:26:in &#39;block in &lt;class:EventsTest&gt;&#39;
     </error>
   </testcase>
-  <testcase time='0.342230' file="test/system/events_test.rb" name="test_should_destroy_Event" assertions='0'>
-    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
-    </error>
+  <testcase time='0.270051' file="test/system/events_test.rb" name="test_should_update_Event" assertions='2'>
   </testcase>
-  <testcase time='0.326675' file="test/system/events_test.rb" name="test_visiting_the_index" assertions='0'>
-    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
-    </error>
+  <testcase time='0.166231' file="test/system/events_test.rb" name="test_should_approve_event" assertions='3'>
   </testcase>
-  <testcase time='0.329772' file="test/system/events_test.rb" name="test_should_update_Event" assertions='0'>
-    <error type='ActionView::Template::Error' message="no implicit conversion of Array into String">app/views/layouts/application.html.erb:24
-    </error>
+  <testcase time='0.145390' file="test/system/events_test.rb" name="test_visiting_the_index" assertions='1'>
   </testcase>
 </testsuite>
