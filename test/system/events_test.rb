@@ -13,7 +13,6 @@ class EventsTest < ApplicationSystemTestCase
   end
 
   test "should create event" do
-    skip("not sure how to get around this datepicker")
     visit events_url
     click_on "New event"
 
@@ -24,7 +23,7 @@ class EventsTest < ApplicationSystemTestCase
     @event.tags.each do |tag|
       select.select(tag)
     end
-    page.execute_script("document.querySelector('#event_start_time').setAttribute('value', #{@event.start_time.strftime("%Y-%m-%dT%H:%M:%S")})")
+    fill_in "Start time", with: @event.start_time.strftime("%m%d%Y\t%I%M%P")
     fill_in "Url", with: @event.url
     click_on "Create Event"
 
