@@ -52,5 +52,6 @@ group :test do
   gem "capybara"
   gem "capybara-playwright-driver"
   gem "minitest-ci"
+  gem "mocha", require: false
   gem "selenium-webdriver"
 end
