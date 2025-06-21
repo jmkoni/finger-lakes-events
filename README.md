@@ -16,11 +16,12 @@ This application uses [Ruby 3.4.4](https://www.ruby-lang.org/en/documentation/in
 You can use either [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io). Further instructions assume use of rvm.
 1. Install rvm.
 2. `rvm install ruby-3.4.4`
-3. `cd` into `finger-lakes-events` directory
-4. This should create a `finger-lakes` gemset (a self-contained set of installed gems to avoid conflicts).
-5. `gem install bundler`
-6. `bundle install`
-7. You are good to go!
+3. Install [postgres](https://www.postgresql.org) however you want.
+4. `cd` into `finger-lakes-events` directory
+5. This should create a `finger-lakes` gemset (a self-contained set of installed gems to avoid conflicts).
+6. `gem install bundler`
+7. `bundle install`
+8. You are good to go!
 
 ## Running Locally
 
