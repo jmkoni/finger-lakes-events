@@ -24,12 +24,12 @@ You can use either [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.
 8. You are good to go!
 
 ## Running Locally
-
-`rails db:setup`
-`rails c`
-Then create a user with whatever email you feel like (doesn't matter if it's valid, it's just local...) by running this in the rails console:
+1. Ensure postgres is running (if you installed via brew, it's `brew services start postgresql@14`
+2. `rails db:setup`
+3. `rails c`
+4. Then create a user with whatever email you feel like (doesn't matter if it's valid, it's just local...) by running this in the rails console:
 `User.create(name: #{your name}, email: #{your email})`
-Then...
+5. Then...
 `rails s`
 And you should be good to go!
 
