@@ -56,6 +56,7 @@ class EventsTest < ApplicationSystemTestCase
     visit list_events_url
     click_on(class: "reject-event-#{@event.id}")
     assert text "Event was successfully rejected."
+    sleep 1
     @event.reload
     assert_equal "rejected", @event.status
     assert_equal @user.id, @event.approved_by_id

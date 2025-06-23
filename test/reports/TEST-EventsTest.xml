@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite time='2.328886' skipped='0' failures='0' errors='0' name="EventsTest" assertions='11' tests='6' timestamp="2025-06-11T15:12:12-04:00">
-  <testcase time='1.382227' file="test/system/events_test.rb" name="test_should_update_Event" assertions='2'>
+<testsuite time='3.345428' skipped='0' failures='0' errors='0' name="EventsTest" assertions='11' tests='6' timestamp="2025-06-23T15:16:41-04:00">
+  <testcase time='2.268556' file="test/system/events_test.rb" name="test_should_reject_event" assertions='3'>
   </testcase>
-  <testcase time='0.393040' file="test/system/events_test.rb" name="test_should_create_event" assertions='1'>
+  <testcase time='0.296370' file="test/system/events_test.rb" name="test_should_update_Event" assertions='2'>
   </testcase>
-  <testcase time='0.138243' file="test/system/events_test.rb" name="test_should_reject_event" assertions='3'>
+  <testcase time='0.171539' file="test/system/events_test.rb" name="test_should_destroy_Event" assertions='1'>
   </testcase>
-  <testcase time='0.172112' file="test/system/events_test.rb" name="test_should_destroy_Event" assertions='1'>
+  <testcase time='0.366299' file="test/system/events_test.rb" name="test_should_create_event" assertions='1'>
   </testcase>
-  <testcase time='0.112184' file="test/system/events_test.rb" name="test_visiting_the_index" assertions='1'>
+  <testcase time='0.132206' file="test/system/events_test.rb" name="test_should_approve_event" assertions='3'>
   </testcase>
-  <testcase time='0.131080' file="test/system/events_test.rb" name="test_should_approve_event" assertions='3'>
+  <testcase time='0.110458' file="test/system/events_test.rb" name="test_visiting_the_index" assertions='1'>
   </testcase>
 </testsuite>
