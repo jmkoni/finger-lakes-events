@@ -1,6 +1,8 @@
 <% content_for :title, "Events" %>
 <div class="tag-nav">Tags: <% Event::TAGS.sort.each do |tag| %>
-  <div class="tag-link"><%= link_to tag, events_path(tag: tag) %></div>
+  <div class="tag-link <%= 'selected' if params[:tag] == tag %>">
+    <%= link_to tag, events_path(tag: tag) %>
+  </div>
 <% end %>
   <div class="tag-link"><%= link_to "all", events_path %></div>
 </div>
