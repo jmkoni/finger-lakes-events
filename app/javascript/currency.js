@@ -1,15 +1,12 @@
-// window.addEventListener("load", function() {
-  if (document.querySelector('.dollar')) {
-    console.log('dollar input found');
-    document.querySelector('.dollar').value = "$0.00";
-    document.querySelector('.dollar').addEventListener('keyup', function() {
-      formatCurrency(this);
-    });
-    document.querySelector('.dollar').addEventListener('blur', function() {
-      formatCurrency(this, 'blur');
-    });
-  };
-// });
+if (document.querySelector('.dollar')) {
+  document.querySelector('.dollar').value = "$0.00";
+  document.querySelector('.dollar').addEventListener('keyup', function() {
+    formatCurrency(this);
+  });
+  document.querySelector('.dollar').addEventListener('blur', function() {
+    formatCurrency(this, 'blur');
+  });
+};
 
 function formatNumber(n) {
   // format number 1000000 to 1,234,567
