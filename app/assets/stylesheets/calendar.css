@@ -19,8 +19,7 @@
     height: 80px;
     padding: 0.5rem;
     text-align: center;
-    border: solid 1px;
-    border-color: var(--white);
+    border: 1px solid #ebbdc1; /* Add a light border for clarity */
   }
 
   .wday-0 {}
@@ -70,5 +69,19 @@
   .has-events {
     background-color: var(--teal);
     color: var(--dark-teal);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    background-color: #8B3E46; /* Background color for headers */
+    color: #FFF8F9; /* Text color for headers */
+    text-align: center; /* Horizontal alignment */
+    vertical-align: middle; /* Vertical alignment */
+    padding: 10px; /* Add some padding for better appearance */
+    border: 1px solid #ebbdc1; /* Add a light border for clarity */
   }
 }

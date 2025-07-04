@@ -138,47 +138,6 @@ h1 a:link {
     text-decoration: none !important;
 }
 
-.tag-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    row-gap: 16px; /* Added more vertical spacing for wrapping */
-    padding: 16px;
-    margin: 15px 0;
-    background-color: #FFF8F9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(90, 37, 43, 0.05);
-}
-
-.tag-nav a {
-    text-decoration: none;
-    padding: 6px 16px 4px;
-    border-radius: 20px;
-    background-color: #F5E6E8;
-    color: #5A252B;
-    font-size: 0.95em;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(90, 37, 43, 0.1);
-}
-
-.tag-nav a:hover {
-    background-color: #8B3E46;
-    color: #FFF8F9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(90, 37, 43, 0.15);
-}
-
-.tag-nav a.active {
-    background-color: #8B3E46;
-    color: #FFF8F9;
-    box-shadow: 0 2px 6px rgba(90, 37, 43, 0.2);
-    border-color: #8B3E46;
-}
-
-
-
-
 @media screen and (max-width: 678px) {
     .burger {
         display: block;
