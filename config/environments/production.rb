@@ -62,7 +62,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
     api_key: ENV["MAILGUN_API_KEY"],
-    domain: "fingerlakesevents.com"
+    domain: "sandbox2c0b1c9ddc034410a594d3badb845329.mailgun.org"
+    # domain: "fingerlakesevents.com"
   }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
