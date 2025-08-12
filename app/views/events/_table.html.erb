@@ -1,4 +1,8 @@
-<table id="events-table<%== approve ? '-approved' : ''} %>">
+<% if approve %>
+    <table id="events-table-approved">
+<% else %>
+    <table id="events-table">
+<% end %>
     <thead>
         <tr>
             <th>Title</th>
