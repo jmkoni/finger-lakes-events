@@ -435,7 +435,7 @@ DEPENDENCIES
   pry-rescue
   pry-stack_explorer
   puma (>= 5.0)
-  rails (~> 8.0.1)
+  rails (~> 8.0.2)
   selenium-webdriver
   simple_calendar
   simple_form
