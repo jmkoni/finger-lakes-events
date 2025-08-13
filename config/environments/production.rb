@@ -58,12 +58,11 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = {host: "finger-lakes-events-bea8bb5c5c53.herokuapp.com"}
+  config.action_mailer.default_url_options = {host: "fingerlakesevents.com"}
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
     api_key: ENV["MAILGUN_API_KEY"],
-    domain: "sandbox2c0b1c9ddc034410a594d3badb845329.mailgun.org"
-    # domain: "fingerlakesevents.com"
+    domain: "fingerlakesevents.com"
   }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
