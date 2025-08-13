@@ -3,6 +3,6 @@ Rails.application.configure do
 
   # add time to lograge
   config.lograge.custom_options = lambda do |event|
-    { time: Time.now }
+    {time: Time.now}
   end
 end
