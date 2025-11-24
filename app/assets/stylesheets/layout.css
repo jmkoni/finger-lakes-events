@@ -122,10 +122,24 @@ header a:visited {
     z-index: 1;
 }
 .burger {
-    font-size: 1.2em;
     display: none;
-    color: #F5E6E8;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
     margin-bottom: 8px;
+    color: inherit;
+}
+
+.burger__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+.burger:focus-visible {
+    outline: 2px dashed var(--gold);
+    outline-offset: 4px;
 }
 
 h1 a:visited{
@@ -141,20 +155,40 @@ h1 a:link {
 @media screen and (max-width: 678px) {
     .burger {
         display: block;
+        margin-left: auto;
+    }
+    header {
+        position: relative;
+        align-items: center;
     }
     .nav {
         margin: 0;
         background: var(--dark-blue);
         position: absolute;
-        right: 0;
+        z-index: 10;
+        left: 0;
         top: 70px;
-        width: 50%;
-        height: calc(100% - 70px);
+        width: 100%;
         flex-direction: column;
-        justify-content: space-around;
-        padding: 0;
+        justify-content: flex-start;
+        padding: 8px 0;
+        gap: 0;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
     .navlink {
         text-align: center;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid rgba(245, 230, 232, 0.2);
+    }
+    .nav.nav-active {
+        max-height: 320px;
+        opacity: 1;
+        pointer-events: auto;
     }
 }

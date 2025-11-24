@@ -8,17 +8,34 @@ window.Stimulus   = application
 
 export { application }
 
-// Selection of HTML objects
-const burger = document.querySelector('.burger i');
-const nav = document.querySelector('.nav');
+function initBurgerMenu() {
+  const burger = document.querySelector('[data-role="burger"]')
+  const nav = document.querySelector('[data-role="primary-nav"]')
 
-// Defining a function
-function toggleNav() {
-  burger.classList.toggle('fa-bars');
-  burger.classList.toggle('fa-times');
-  nav.classList.toggle('nav-active');
+  if (!burger || !nav) return
+
+  const icon = burger.querySelector("[data-role=\"burger-icon\"]")
+
+  const toggleNav = () => {
+    const expanded = burger.getAttribute("aria-expanded") === "true"
+    const nextExpanded = !expanded
+    burger.setAttribute("aria-expanded", nextExpanded.toString())
+    burger.classList.toggle("is-active", nextExpanded)
+    nav.classList.toggle("nav-active", nextExpanded)
+    if (icon) {
+      const {barsSrc, timesSrc, barsAlt, timesAlt} = icon.dataset
+      const nextSrc = nextExpanded ? timesSrc : barsSrc
+      if (nextSrc) {
+        icon.setAttribute("src", nextSrc)
+      }
+      const nextAlt = nextExpanded ? timesAlt : barsAlt
+      if (nextAlt) {
+        icon.setAttribute("alt", nextAlt)
+      }
+    }
+  }
+
+  burger.addEventListener("click", toggleNav)
 }
-// Calling the function after click event occurs
-burger.addEventListener('click', function() {
-  toggleNav();
-});
+
+document.addEventListener("turbo:load", initBurgerMenu)

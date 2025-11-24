@@ -5,3 +5,9 @@ Rails.application.config.assets.version = "1.0"
 
 # Add additional assets to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join("app", "javascript", "currency.js").to_s
+Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fontawesome").to_s
+
+Rails.application.config.assets.precompile += %w[
+  fontawesome/svgs/solid/bars.svg
+  fontawesome/svgs/solid/times.svg
+]

@@ -2,6 +2,8 @@
 
 Simple application built to share events throughout the Finger Lakes!
 
+For contributor workflow details (structure, commands, style, and PR expectations), see [Repository Guidelines](AGENTS.md).
+
 ## System Requirements
 
 **NOTE: if you want to use a version manager, please skip to the next section. Using a version manager is highly recommended.**

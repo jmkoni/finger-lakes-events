@@ -14,6 +14,7 @@ gem "simple_calendar"
 gem "simple_form"
 gem "stimulus-rails"
 gem "turbo-rails"
+gem "font-awesome-rails"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

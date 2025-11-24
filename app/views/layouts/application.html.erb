@@ -34,7 +34,7 @@
           <% end %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
-          <ul class="nav">
+          <ul class="nav" id="primary-nav" data-role="primary-nav">
               <% if current_user %>
                   <li class="navlink"><%= link_to 'Approve Events', list_events_path %></li>
                   <li class="navlink"><%= link_to 'Users', users_path %></li>
@@ -45,9 +45,26 @@
                   <li class="navlink"><%= link_to 'Login', users_sign_in_path %></li>
               <% end %>
           </ul>
-          <div class="burger">
-              <i class="fas fa-bars"></i>
-          </div>
+          <button
+            type="button"
+            class="burger"
+            aria-label="Toggle navigation menu"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            data-role="burger">
+            <%= image_tag(
+              "fontawesome/svgs/solid/bars.svg",
+              alt: "Open navigation menu",
+              class: "burger__icon",
+              data: {
+                role: "burger-icon",
+                bars_src: asset_path("fontawesome/svgs/solid/bars.svg"),
+                times_src: asset_path("fontawesome/svgs/solid/times.svg"),
+                bars_alt: "Open navigation menu",
+                times_alt: "Close navigation menu"
+              }
+            ) %>
+          </button>
       </header>
       <br/>
       <div class="body">
