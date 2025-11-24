@@ -37,6 +37,7 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
+  gem "herb"
   gem "pry-rails"
   gem "pry-rescue"
   gem "pry-stack_explorer"

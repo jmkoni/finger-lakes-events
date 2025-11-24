@@ -52,21 +52,10 @@
             aria-controls="primary-nav"
             aria-expanded="false"
             data-role="burger">
-            <%= image_tag(
-              "fontawesome/svgs/solid/bars.svg",
-              alt: "Open navigation menu",
-              class: "burger__icon",
-              data: {
-                role: "burger-icon",
-                bars_src: asset_path("fontawesome/svgs/solid/bars.svg"),
-                times_src: asset_path("fontawesome/svgs/solid/times.svg"),
-                bars_alt: "Open navigation menu",
-                times_alt: "Close navigation menu"
-              }
-            ) %>
+            <%= fa_icon "bars" %>
           </button>
       </header>
-      <br/>
+      <br>
       <div class="body">
           <%= yield %>
       </div>
