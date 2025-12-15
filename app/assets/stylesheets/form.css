@@ -1,5 +1,5 @@
 .event-form div {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     vertical-align: middle;
     display: flex;
     align-items: center;
@@ -78,4 +78,135 @@ label[for="event_url"] {
 #event_description {
     width: 300px;
     height: 100px;
+}
+
+/* Geolocation styles */
+.location-controls {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.address-search-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.address-search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: -1px;
+}
+
+.search-result-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f5f5f5;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item.no-results {
+    cursor: default;
+    color: #666;
+    font-style: italic;
+}
+
+.search-result-item.no-results:hover {
+    background-color: white;
+}
+
+.result-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.search-status {
+    padding: 10px 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.geolocation-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.geolocation-button:hover {
+    background-color: #45a049;
+}
+
+.geolocation-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+.status-message {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-loading {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
 }

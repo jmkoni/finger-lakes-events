@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_09_194150) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_12_201730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -19,40 +19,42 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_09_194150) do
   create_enum "status_types", ["approved", "pending", "rejected"]
 
   create_table "events", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time"
-    t.string "title", null: false
-    t.string "url"
-    t.text "description"
-    t.text "location"
-    t.string "tags", default: [], array: true
-    t.float "cost", default: 0.0, null: false
-    t.enum "status", default: "pending", null: false, enum_type: "status_types"
     t.bigint "approved_by_id"
+    t.float "cost", default: 0.0, null: false
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "description"
+    t.datetime "end_time"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.text "location"
+    t.decimal "longitude", precision: 10, scale: 6
     t.boolean "pre_registration_required", default: false, null: false
+    t.datetime "start_time", null: false
+    t.enum "status", default: "pending", null: false, enum_type: "status_types"
+    t.string "tags", default: [], array: true
+    t.string "title", null: false
+    t.datetime "updated_at", null: false
+    t.string "url"
     t.index ["approved_by_id"], name: "index_events_on_approved_by_id"
   end
 
   create_table "passwordless_sessions", force: :cascade do |t|
-    t.string "authenticatable_type"
     t.integer "authenticatable_id"
-    t.datetime "timeout_at", precision: nil, null: false
-    t.datetime "expires_at", precision: nil, null: false
+    t.string "authenticatable_type"
     t.datetime "claimed_at", precision: nil
-    t.string "token_digest", null: false
-    t.string "identifier", null: false
     t.datetime "created_at", null: false
+    t.datetime "expires_at", precision: nil, null: false
+    t.string "identifier", null: false
+    t.datetime "timeout_at", precision: nil, null: false
+    t.string "token_digest", null: false
     t.datetime "updated_at", null: false
     t.index ["authenticatable_type", "authenticatable_id"], name: "authenticatable"
     t.index ["identifier"], name: "index_passwordless_sessions_on_identifier", unique: true
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.string "email", default: "", null: false
     t.datetime "created_at", null: false
+    t.string "email", default: "", null: false
+    t.string "name", default: "", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end

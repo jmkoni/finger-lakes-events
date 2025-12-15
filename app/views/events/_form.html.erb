@@ -17,9 +17,30 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="required">
+  <div class="required" data-controller="geolocation" data-action="click@window->geolocation#closeSearchResults">
     <%= form.label :location %>
-    <%= form.text_field :location %>
+    
+    <%= form.hidden_field :latitude, data: { geolocation_target: "latitude" } %>
+    <%= form.hidden_field :longitude, data: { geolocation_target: "longitude" } %>
+    
+    <div class="location-controls">
+      <div class="search-container">
+        <%= form.text_field :location, 
+            data: { geolocation_target: "location", action: "input->geolocation#searchAddress" },
+            placeholder: "Search for an address or place...",
+            class: "address-search-input" %>
+        <div data-geolocation-target="searchResults" class="search-results"></div>
+      </div>
+      
+      <button type="button" 
+              data-geolocation-target="button"
+              data-action="click->geolocation#getCurrentLocation"
+              class="geolocation-button">
+        📍 Use My Location
+      </button>
+    </div>
+    
+    <div data-geolocation-target="status" class="status-message"></div>
   </div>
 
   <div class="required">
