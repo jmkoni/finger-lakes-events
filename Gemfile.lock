@@ -127,7 +127,7 @@ GEM
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
-    faraday-multipart (1.1.1)
+    faraday-multipart (1.2.0)
       multipart-post (~> 2.0)
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
@@ -160,7 +160,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    json (2.16.0)
+    json (2.18.0)
     kamal (2.8.2)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -195,10 +195,11 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mailgun-ruby (1.4.0)
+    mailgun-ruby (1.4.1)
       faraday (~> 2.1)
-      faraday-multipart (~> 1.1.0)
+      faraday-multipart (< 2)
       mini_mime
+      zeitwerk
     marcel (1.1.0)
     matrix (0.4.3)
     method_source (1.1.0)
@@ -214,7 +215,7 @@ GEM
       ruby2_keywords (>= 0.0.5)
     msgpack (1.8.0)
     multipart-post (2.4.1)
-    net-http (0.8.0)
+    net-http (0.9.1)
       uri (>= 0.11.1)
     net-imap (0.5.12)
       date
