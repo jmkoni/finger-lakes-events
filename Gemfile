@@ -3,6 +3,7 @@ ruby "3.4.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.1"
+gem "image_processing"
 gem "importmap-rails"
 gem "jbuilder"
 gem "lograge"
