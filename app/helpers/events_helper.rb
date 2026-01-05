@@ -13,7 +13,7 @@ module EventsHelper
 
   def format_url(url)
     if url.present?
-      "<a href='<%= url %>' target='_blank'>#{url}</a>".html_safe
+      "<a href='<%= #{url} %>' target='_blank'>#{url}</a>".html_safe
     else
       "No URL"
     end
